@@ -1,0 +1,138 @@
+{{- define "main" }}
+
+<article class="photo-detail">
+    <header class="photo-header">
+        <h1 class="photo-title">{{ .Title }}</h1>
+        {{- if .Description }}
+        <p class="photo-description">{{ .Description }}</p>
+        {{- end }}
+        <div class="photo-meta">
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                {{ .Date.Format "MMMM d, yyyy" }}
+            </time>
+            {{- with .Params.location }}
+            <span class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                {{ . }}
+            </span>
+            {{- end }}
+        </div>
+    </header>
+    
+    {{- $images := .Params.images }}
+    {{- if not $images }}
+        {{- with .Resources.ByType "image" }}
+            {{- $images = slice }}
+            {{- range . }}
+                {{- $images = $images | append .RelPermalink }}
+            {{- end }}
+        {{- end }}
+    {{- end }}
+    
+    {{- if $images }}
+    <div class="photo-gallery">
+        {{- range $images }}
+            {{- $imgURL := . }}
+            {{- $caption := "" }}
+            {{- if reflect.IsMap . }}
+                {{- $imgURL = .url }}
+                {{- $caption = .caption | default "" }}
+            {{- end }}
+            <figure class="photo-item">
+                <img 
+                    src="{{ $imgURL | absURL }}" 
+                    alt="{{ $.Title }}{{ if $caption }} - {{ $caption }}{{ end }}"
+                    class="photo-image"
+                    loading="lazy"
+                >
+                {{- if $caption }}
+                <figcaption class="photo-caption">{{ $caption }}</figcaption>
+                {{- end }}
+            </figure>
+        {{- end }}
+    </div>
+    {{- end }}
+    
+    {{- with .Content }}
+    <div class="photo-content">
+        {{ . }}
+    </div>
+    {{- end }}
+    
+    {{- with .Params.camera }}
+    <div class="photo-exif">
+        <h3>Camera Info</h3>
+        <div class="exif-grid">
+            {{- with .model }}
+            <div class="exif-item">
+                <span class="exif-label">Camera</span>
+                <span class="exif-value">{{ . }}</span>
+            </div>
+            {{- end }}
+            {{- with .lens }}
+            <div class="exif-item">
+                <span class="exif-label">Lens</span>
+                <span class="exif-value">{{ . }}</span>
+            </div>
+            {{- end }}
+            {{- with .aperture }}
+            <div class="exif-item">
+                <span class="exif-label">Aperture</span>
+                <span class="exif-value">{{ . }}</span>
+            </div>
+            {{- end }}
+            {{- with .shutter }}
+            <div class="exif-item">
+                <span class="exif-label">Shutter</span>
+                <span class="exif-value">{{ . }}</span>
+            </div>
+            {{- end }}
+            {{- with .iso }}
+            <div class="exif-item">
+                <span class="exif-label">ISO</span>
+                <span class="exif-value">{{ . }}</span>
+            </div>
+            {{- end }}
+            {{- with .focal_length }}
+            <div class="exif-item">
+                <span class="exif-label">Focal Length</span>
+                <span class="exif-value">{{ . }}</span>
+            </div>
+            {{- end }}
+        </div>
+    </div>
+    {{- end }}
+    
+    {{- with .Params.tags }}
+    <div class="photo-tags">
+        {{- range . }}
+        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="photo-tag">#{{ . }}</a>
+        {{- end }}
+    </div>
+    {{- end }}
+    
+    <nav class="photo-nav">
+        {{- with .PrevInSection }}
+        <a href="{{ .Permalink }}" class="nav-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <span>{{ .Title }}</span>
+        </a>
+        {{- end }}
+        
+        {{- with .NextInSection }}
+        <a href="{{ .Permalink }}" class="nav-next">
+            <span>{{ .Title }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </a>
+        {{- end }}
+    </nav>
+</article>
+
+{{- end }}

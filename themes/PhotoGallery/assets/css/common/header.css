@@ -1,0 +1,120 @@
+/* Header styles */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--entry);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--nav-width);
+    margin: 0 auto;
+    padding: 0 var(--gap);
+    height: var(--header-height);
+}
+
+/* Logo styles */
+.logo {
+    flex: 1;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.site-title {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Navigation right section */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--gap) / 2);
+}
+
+/* Menu styles */
+#menu {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+
+#menu a {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    transition: all 0.2s ease;
+}
+
+#menu a:hover {
+    background: var(--hover);
+    color: var(--accent);
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--primary);
+    transition: all 0.2s ease;
+}
+
+#theme-toggle:hover {
+    background: var(--hover);
+}
+
+#theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+[data-theme="dark"] #sun,
+[data-theme="light"] #moon {
+    display: none;
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+    .nav {
+        padding: 0 calc(var(--gap) / 2);
+    }
+    
+    .logo a {
+        font-size: 20px;
+    }
+    
+    #menu {
+        gap: calc(var(--gap) / 2);
+    }
+    
+    #menu a {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}

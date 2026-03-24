@@ -1,0 +1,37 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-CN'
+title = '我的相册'
+theme = 'PhotoGallery'
+
+[params]
+    author = '摄影师'
+    description = '使用 Hugo 构建的个人相册'
+    defaultTheme = 'auto'
+    disableThemeToggle = false
+    
+    [params.footer]
+        hideCopyright = false
+    
+    [params.assets]
+        favicon = '/favicon.ico'
+        apple_touch_icon = '/apple-touch-icon.png'
+
+[menu]
+    [[menu.main]]
+        identifier = 'home'
+        name = '首页'
+        url = '/'
+        weight = 10
+    [[menu.main]]
+        identifier = 'about'
+        name = '关于'
+        url = '/about/'
+        weight = 20
+
+[pagination]
+    pagerSize = 12
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true

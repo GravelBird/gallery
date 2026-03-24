@@ -1,0 +1,75 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+<meta name="robots" content="index, follow">
+{{- else }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+
+{{- /* Title */}}
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ site.Title }}{{ end }}</title>
+
+{{- /* Meta */}}
+<meta name="keywords" content="{{ if .Params.keywords }}{{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}{{ else }}{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}{{ end }}">
+<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}{{- .Summary | default (printf "%s - %s" .Title site.Title) }}{{- else }}{{- with site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
+<meta name="author" content="{{ site.Params.author | default site.Title }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- /* Styles */}}
+{{- $theme_vars := resources.Get "css/core/theme-vars.css" }}
+{{- $reset := resources.Get "css/core/reset.css" }}
+{{- $main := resources.Get "css/common/main.css" }}
+{{- $header := resources.Get "css/common/header.css" }}
+{{- $footer := resources.Get "css/common/footer.css" }}
+{{- $album := resources.Get "css/common/album.css" }}
+
+{{- $core := (slice $theme_vars $reset $main $header $footer $album) | resources.Concat "assets/css/core.css" | resources.Minify }}
+
+{{- if not site.Params.assets.disableFingerprinting }}
+{{- $stylesheet := $core | fingerprint }}
+<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet" as="style">
+{{- else }}
+<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
+{{- end }}
+
+{{- /* Favicons */}}
+<link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
+<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
+<meta name="theme-color" content="{{ site.Params.assets.theme_color | default "#fafafa" }}">
+
+{{- /* RSS */}}
+{{ range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}" title="{{ .Name }}">
+{{ end -}}
+
+{{- /* Open Graph / Twitter Cards */}}
+<meta property="og:title" content="{{ .Title | default site.Title }}" />
+<meta property="og:description" content="{{ .Description | default site.Params.description }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+{{ with .Params.images }}<meta property="og:image" content="{{ (index . 0).url | absURL }}" />{{ end }}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .Title | default site.Title }}" />
+<meta name="twitter:description" content="{{ .Description | default site.Params.description }}" />
+{{ with .Params.images }}<meta name="twitter:image" content="{{ (index . 0).url | absURL }}" />{{ end }}
+
+{{- /* Theme toggle script (inline for no flash) */}}
+{{- if not site.Params.disableThemeToggle }}
+<script>
+    (function() {
+        const theme = localStorage.getItem("pref-theme");
+        const html = document.documentElement;
+        if (theme === "dark") {
+            html.setAttribute("data-theme", "dark");
+        } else if (theme === "light") {
+            html.setAttribute("data-theme", "light");
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            html.setAttribute("data-theme", "dark");
+        } else {
+            html.setAttribute("data-theme", "light");
+        }
+    })();
+</script>
+{{- end }}

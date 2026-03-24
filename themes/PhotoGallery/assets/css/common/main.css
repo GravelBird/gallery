@@ -1,0 +1,84 @@
+/* Main layout styles */
+
+/* Main container */
+.main {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    max-width: var(--main-width);
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+/* Selection styling */
+::selection {
+    background: var(--accent);
+    color: white;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+    margin-top: calc(var(--gap) * 2);
+    padding: var(--gap);
+}
+
+.pagination a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.pagination a:hover {
+    background: var(--hover);
+    border-color: var(--accent);
+}
+
+.pagination .page-info {
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+    .main {
+        padding: calc(var(--gap) / 2);
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: calc(var(--gap) / 2);
+    }
+}

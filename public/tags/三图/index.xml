@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>三图 on 我的相册</title>
+    <link>http://localhost:1313/tags/%E4%B8%89%E5%9B%BE/</link>
+    <description>Recent content in 三图 on 我的相册</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 08 Mar 2024 09:20:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E4%B8%89%E5%9B%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>三图网格测试</title>
+      <link>http://localhost:1313/posts/test-three-images/</link>
+      <pubDate>Fri, 08 Mar 2024 09:20:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test-three-images/</guid>
+      <description>三张图片的网格布局测试，第一张占满宽度，下面两张并排显示。</description>
+    </item>
+  </channel>
+</rss>

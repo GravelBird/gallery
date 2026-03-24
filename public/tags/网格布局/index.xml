@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网格布局 on 我的相册</title>
+    <link>http://localhost:1313/tags/%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/</link>
+    <description>Recent content in 网格布局 on 我的相册</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 09 Mar 2024 16:45:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>双图展示测试</title>
+      <link>http://localhost:1313/posts/test-two-images/</link>
+      <pubDate>Sat, 09 Mar 2024 16:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test-two-images/</guid>
+      <description>展示两张图片的网格布局效果，PhotoGallery主题会自动将两张图片并排显示。</description>
+    </item>
+    <item>
+      <title>三图网格测试</title>
+      <link>http://localhost:1313/posts/test-three-images/</link>
+      <pubDate>Fri, 08 Mar 2024 09:20:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test-three-images/</guid>
+      <description>三张图片的网格布局测试，第一张占满宽度，下面两张并排显示。</description>
+    </item>
+  </channel>
+</rss>

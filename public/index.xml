@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>我的相册</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on 我的相册</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 24 Mar 2026 11:31:47 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Tue, 24 Mar 2026 11:31:47 +0800</pubDate>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description>&lt;h2 id=&#34;欢迎来到我的博客&#34;&gt;欢迎来到我的博客！&lt;/h2&gt;&#xA;&lt;p&gt;这是我的第一篇博客文章，使用 &lt;strong&gt;Hugo&lt;/strong&gt; 静态网站生成器构建。&lt;/p&gt;&#xA;&lt;h3 id=&#34;什么是-hugo&#34;&gt;什么是 Hugo？&lt;/h3&gt;&#xA;&lt;p&gt;Hugo 是世界上最快的静态网站生成器之一，使用 Go 语言编写。它使用 Markdown 格式，让你可以专注于写作内容。&lt;/p&gt;&#xA;&lt;h3 id=&#34;特性&#34;&gt;特性&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;⚡ 极速构建&lt;/li&gt;&#xA;&lt;li&gt;📝 Markdown 支持&lt;/li&gt;&#xA;&lt;li&gt;🎨 丰富的主题&lt;/li&gt;&#xA;&lt;li&gt;🏷️ 标签和分类&lt;/li&gt;&#xA;&lt;li&gt;📊 内置功能如 RSS、多语言等&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;感谢你的访问！&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>单张照片测试</title>
+      <link>http://localhost:1313/posts/test-single-image/</link>
+      <pubDate>Sun, 10 Mar 2024 14:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test-single-image/</guid>
+      <description>这是单张照片的测试文章，展示PhotoGallery主题对单张图片的展示效果。</description>
+    </item>
+    <item>
+      <title>双图展示测试</title>
+      <link>http://localhost:1313/posts/test-two-images/</link>
+      <pubDate>Sat, 09 Mar 2024 16:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test-two-images/</guid>
+      <description>展示两张图片的网格布局效果，PhotoGallery主题会自动将两张图片并排显示。</description>
+    </item>
+    <item>
+      <title>三图网格测试</title>
+      <link>http://localhost:1313/posts/test-three-images/</link>
+      <pubDate>Fri, 08 Mar 2024 09:20:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test-three-images/</guid>
+      <description>三张图片的网格布局测试，第一张占满宽度，下面两张并排显示。</description>
+    </item>
+    <item>
+      <title>四图完整网格测试</title>
+      <link>http://localhost:1313/posts/test-four-images/</link>
+      <pubDate>Thu, 07 Mar 2024 11:15:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test-four-images/</guid>
+      <description>四张图片的2x2网格布局展示，完美呈现Instagram风格的多图展示效果。</description>
+    </item>
+    <item>
+      <title>完整EXIF信息测试</title>
+      <link>http://localhost:1313/posts/test-exif-info/</link>
+      <pubDate>Wed, 06 Mar 2024 18:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test-exif-info/</guid>
+      <description>展示完整的相机参数信息，包括相机型号、镜头、光圈、快门、ISO和焦距。</description>
+    </item>
+    <item>
+      <title>示例相册文章</title>
+      <link>http://localhost:1313/posts/example-gallery/</link>
+      <pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/example-gallery/</guid>
+      <description>这是一个示例相册文章，展示了PhotoGallery主题的功能。支持多张图片展示、标签分类、相机参数等信息。</description>
+    </item>
+    <item>
+      <title>关于</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;关于我的相册&#34;&gt;关于我的相册&lt;/h1&gt;&#xA;&lt;p&gt;欢迎来到我的个人相册！这里记录了我用镜头捕捉的美好瞬间。&lt;/p&gt;&#xA;&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;&#xA;&lt;p&gt;我是一名热爱摄影的爱好者，喜欢通过镜头记录生活中的美好瞬间。无论是城市风光、自然风光还是人文纪实，都是我喜欢拍摄的题材。&lt;/p&gt;&#xA;&lt;h2 id=&#34;使用的设备&#34;&gt;使用的设备&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;相机&lt;/strong&gt;: Sony A7III&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;镜头&lt;/strong&gt;: FE 24-70mm f/2.8 GM, FE 85mm f/1.8&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;配件&lt;/strong&gt;: 三脚架、滤镜、备用电池&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;联系方式&#34;&gt;联系方式&lt;/h2&gt;&#xA;&lt;p&gt;如果你对我的作品感兴趣，或者想要交流摄影技巧，欢迎通过以下方式联系我：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;邮箱: &lt;a href=&#34;mailto:photographer@example.com&#34;&gt;photographer@example.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Instagram: @photographer&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;感谢你的访问！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

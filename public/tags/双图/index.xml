@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>双图 on 我的相册</title>
+    <link>http://localhost:1313/tags/%E5%8F%8C%E5%9B%BE/</link>
+    <description>Recent content in 双图 on 我的相册</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 09 Mar 2024 16:45:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%8F%8C%E5%9B%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>双图展示测试</title>
+      <link>http://localhost:1313/posts/test-two-images/</link>
+      <pubDate>Sat, 09 Mar 2024 16:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test-two-images/</guid>
+      <description>展示两张图片的网格布局效果，PhotoGallery主题会自动将两张图片并排显示。</description>
+    </item>
+  </channel>
+</rss>
