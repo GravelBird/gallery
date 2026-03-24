@@ -1,0 +1,112 @@
+/* Photos Page - Photo Wall Styles */
+
+.photos-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.photos-page .page-header {
+    text-align: center;
+    margin-bottom: calc(var(--gap) * 2);
+    padding: calc(var(--gap) * 2) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.photos-page .page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.photos-page .page-description {
+    color: var(--secondary);
+    font-size: 16px;
+}
+
+/* Photos Grid - 3 columns layout */
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--gap) / 2);
+}
+
+.photo-item {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--entry);
+}
+
+.photo-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.photo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover .photo-image {
+    transform: scale(1.05);
+}
+
+/* Photo Overlay */
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.photo-item:hover .photo-overlay {
+    opacity: 1;
+}
+
+.photo-overlay .photo-title {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.photo-overlay .photo-caption {
+    font-size: 12px;
+    opacity: 0.8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive - Tablet: 2 columns */
+@media (max-width: 768px) {
+    .photos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive - Mobile: 1 column */
+@media (max-width: 480px) {
+    .photos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .photos-page .page-header h1 {
+        font-size: 24px;
+    }
+}

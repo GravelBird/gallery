@@ -23,8 +23,10 @@
 {{- $header := resources.Get "css/common/header.css" }}
 {{- $footer := resources.Get "css/common/footer.css" }}
 {{- $album := resources.Get "css/common/album.css" }}
+{{- $photos := resources.Get "css/common/photos.css" }}
+{{- $tags := resources.Get "css/common/tags.css" }}
 
-{{- $core := (slice $theme_vars $reset $main $header $footer $album) | resources.Concat "assets/css/core.css" | resources.Minify }}
+{{- $core := (slice $theme_vars $reset $main $header $footer $album $photos $tags) | resources.Concat "assets/css/core.css" | resources.Minify }}
 
 {{- if not site.Params.assets.disableFingerprinting }}
 {{- $stylesheet := $core | fingerprint }}

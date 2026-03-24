@@ -1,0 +1,155 @@
+/* Tags Page - Tag Overview Styles */
+
+.tags-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.tags-page .page-header {
+    text-align: center;
+    margin-bottom: calc(var(--gap) * 2);
+    padding: calc(var(--gap) * 2) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.tags-page .page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tags-page .page-description {
+    color: var(--secondary);
+    font-size: 16px;
+}
+
+/* Tags Grid */
+.tags-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+/* Tag Card */
+.tag-card {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.tag-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px var(--shadow);
+}
+
+.tag-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Tag Preview Grid - 3x3 */
+.tag-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    aspect-ratio: 1;
+    gap: 2px;
+    background: var(--border);
+}
+
+.tag-preview-item {
+    position: relative;
+    overflow: hidden;
+    background: var(--theme);
+}
+
+.tag-preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tag-preview-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Tag Preview Placeholder */
+.tag-preview-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tertiary);
+    color: var(--secondary);
+    font-size: 24px;
+    font-weight: 600;
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+/* Tag Info */
+.tag-info {
+    padding: 16px;
+    text-align: center;
+}
+
+.tag-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--primary);
+}
+
+.tag-count {
+    font-size: 13px;
+    color: var(--secondary);
+}
+
+/* Tag Detail Page */
+.tag-detail-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.tag-detail-page .page-header {
+    text-align: center;
+    margin-bottom: calc(var(--gap) * 2);
+    padding: calc(var(--gap) * 2) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.tag-detail-page .page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--accent);
+}
+
+/* Responsive - Tablet: 2 columns */
+@media (max-width: 768px) {
+    .tags-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tags-page .page-header h1,
+    .tag-detail-page .page-header h1 {
+        font-size: 28px;
+    }
+}
+
+/* Responsive - Mobile: 1 column */
+@media (max-width: 480px) {
+    .tags-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tags-page .page-header h1,
+    .tag-detail-page .page-header h1 {
+        font-size: 24px;
+    }
+}

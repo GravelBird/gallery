@@ -1,0 +1,51 @@
+{{- define "main" }}
+
+<div class="tags-page">
+    <header class="page-header">
+        <h1>标签</h1>
+        <p class="page-description">按标签浏览照片</p>
+    </header>
+
+    <div class="tags-grid">
+        {{- range .Data.Terms.Alphabetical }}
+        {{- $tag := . }}
+        {{- $tagName := .Name }}
+        <div class="tag-card">
+            <a href="{{ .Page.Permalink }}" class="tag-link">
+                <div class="tag-preview">
+                    {{- $postsWithTag := .Pages }}
+                    {{- $imageCount := 0 }}
+                    {{- range $postsWithTag }}
+                        {{- if lt $imageCount 9 }}
+                            {{- $post := . }}
+                            {{- $images := .Params.images }}
+                            {{- if $images }}
+                                {{- range $images }}
+                                    {{- if lt $imageCount 9 }}
+                                        {{- $imgURL := .url }}
+                                        <div class="tag-preview-item">
+                                            <img src="{{ $imgURL }}" alt="{{ $post.Title }}" loading="lazy">
+                                        </div>
+                                        {{- $imageCount = add $imageCount 1 }}
+                                    {{- end }}
+                                {{- end }}
+                            {{- end }}
+                        {{- end }}
+                    {{- end }}
+                    {{- if eq $imageCount 0 }}
+                        <div class="tag-preview-placeholder">
+                            <span>{{ $tagName }}</span>
+                        </div>
+                    {{- end }}
+                </div>
+                <div class="tag-info">
+                    <h2 class="tag-name">{{ $tagName }}</h2>
+                    <span class="tag-count">{{ .Count }} 篇文章</span>
+                </div>
+            </a>
+        </div>
+        {{- end }}
+    </div>
+</div>
+
+{{- end }}

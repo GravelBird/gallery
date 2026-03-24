@@ -1,0 +1,35 @@
+{{- define "main" }}
+
+<div class="photos-page">
+    <header class="page-header">
+        <h1>照片墙</h1>
+        <p class="page-description">所有照片平铺展示</p>
+    </header>
+
+    <div class="photos-grid">
+        {{- $allPosts := where site.RegularPages "Type" "posts" }}
+        {{- range $allPosts }}
+            {{- $post := . }}
+            {{- $images := .Params.images }}
+            {{- if $images }}
+                {{- range $images }}
+                    {{- $imgURL := .url }}
+                    {{- $caption := .caption | default "" }}
+                    <div class="photo-item">
+                        <a href="{{ $post.Permalink }}" class="photo-link" title="{{ $post.Title }}{{ if $caption }} - {{ $caption }}{{ end }}">
+                            <img src="{{ $imgURL }}" alt="{{ $post.Title }}{{ if $caption }} - {{ $caption }}{{ end }}" class="photo-image" loading="lazy">
+                            <div class="photo-overlay">
+                                <span class="photo-title">{{ $post.Title }}</span>
+                                {{- if $caption }}
+                                <span class="photo-caption">{{ $caption }}</span>
+                                {{- end }}
+                            </div>
+                        </a>
+                    </div>
+                {{- end }}
+            {{- end }}
+        {{- end }}
+    </div>
+</div>
+
+{{- end }}
