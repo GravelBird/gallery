@@ -33,10 +33,10 @@
     display: block;
 }
 
-/* Album Image Grid - Instagram style */
+/* Album Image Grid - 4:3 camera aspect ratio */
 .album-image-grid {
     position: relative;
-    aspect-ratio: 1;
+    aspect-ratio: 4/3;
     overflow: hidden;
     background: var(--theme);
 }
