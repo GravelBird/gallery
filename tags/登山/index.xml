@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>登山 on 我的相册</title>
+    <link>http://localhost:1313/tags/%E7%99%BB%E5%B1%B1/</link>
+    <description>Recent content in 登山 on 我的相册</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 20 Mar 2024 06:00:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%99%BB%E5%B1%B1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>富士山 - 日本的神圣之峰</title>
+      <link>http://localhost:1313/posts/mount-fuji/</link>
+      <pubDate>Wed, 20 Mar 2024 06:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/posts/mount-fuji/</guid>
+      <description>在樱花盛开的季节，远眺富士山的完美锥形，感受日本的自然之美与文化底蕴。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>现代建筑 on 我的相册</title>
+    <link>http://localhost:1313/tags/%E7%8E%B0%E4%BB%A3%E5%BB%BA%E7%AD%91/</link>
+    <description>Recent content in 现代建筑 on 我的相册</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 25 Sep 2024 18:00:00 +0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%8E%B0%E4%BB%A3%E5%BB%BA%E7%AD%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>哈利法塔 - 触摸云端</title>
+      <link>http://localhost:1313/posts/burj-khalifa/</link>
+      <pubDate>Wed, 25 Sep 2024 18:00:00 +0400</pubDate>
+      <guid>http://localhost:1313/posts/burj-khalifa/</guid>
+      <description>站在世界最高建筑的观景台，俯瞰迪拜的壮丽天际线和无尽沙漠，感受人类建筑的奇迹。</description>
+    </item>
+  </channel>
+</rss>
