@@ -51,11 +51,11 @@
     color: inherit;
 }
 
-/* Tag Preview Grid - 3x3 */
+/* Tag Preview Grid - 2x2 (same as homepage) */
 .tag-preview {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     aspect-ratio: 4/3;
     gap: 2px;
     background: var(--border);

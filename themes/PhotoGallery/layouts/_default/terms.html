@@ -16,12 +16,12 @@
                     {{- $postsWithTag := .Pages }}
                     {{- $imageCount := 0 }}
                     {{- range $postsWithTag }}
-                        {{- if lt $imageCount 9 }}
+                        {{- if lt $imageCount 4 }}
                             {{- $post := . }}
                             {{- $images := .Params.images }}
                             {{- if $images }}
                                 {{- range $images }}
-                                    {{- if lt $imageCount 9 }}
+                                    {{- if lt $imageCount 4 }}
                                         {{- $imgURL := .url }}
                                         <div class="tag-preview-item">
                                             <img src="{{ $imgURL }}" alt="{{ $post.Title }}" loading="lazy">
