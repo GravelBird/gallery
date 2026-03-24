@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>纽约 on 我的相册</title>
+    <link>http://localhost:1313/tags/%E7%BA%BD%E7%BA%A6/</link>
+    <description>Recent content in 纽约 on 我的相册</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 20 Mar 2024 09:00:00 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%BA%BD%E7%BA%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>纽约 - 不夜城的无限魅力</title>
+      <link>http://localhost:1313/posts/new-york-city/</link>
+      <pubDate>Wed, 20 Mar 2024 09:00:00 -0500</pubDate>
+      <guid>http://localhost:1313/posts/new-york-city/</guid>
+      <description>从时代广场的霓虹到中央公园的宁静，纽约展现着世界之都的多元与活力。</description>
+    </item>
+  </channel>
+</rss>

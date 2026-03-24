@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>蓝顶教堂 on 我的相册</title>
+    <link>http://localhost:1313/tags/%E8%93%9D%E9%A1%B6%E6%95%99%E5%A0%82/</link>
+    <description>Recent content in 蓝顶教堂 on 我的相册</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 21 Jun 2024 17:30:00 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%93%9D%E9%A1%B6%E6%95%99%E5%A0%82/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>希腊圣托里尼 - 爱琴海的蓝白童话</title>
+      <link>http://localhost:1313/posts/santorini-greece/</link>
+      <pubDate>Fri, 21 Jun 2024 17:30:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/santorini-greece/</guid>
+      <description>白色的房屋、蓝色的圆顶教堂、绝美的日落，这里是人间天堂的代名词。</description>
+    </item>
+  </channel>
+</rss>

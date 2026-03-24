@@ -6,14 +6,14 @@
     <description>Recent content in 上海 on 我的相册</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 15 Jan 2024 10:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jan 2024 08:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E4%B8%8A%E6%B5%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>示例相册文章</title>
-      <link>http://localhost:1313/posts/example-gallery/</link>
-      <pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/example-gallery/</guid>
-      <description>这是一个示例相册文章，展示了PhotoGallery主题的功能。支持多张图片展示、标签分类、相机参数等信息。</description>
+      <title>上海 - 东方魔都的璀璨夜景</title>
+      <link>http://localhost:1313/posts/shanghai/</link>
+      <pubDate>Mon, 15 Jan 2024 08:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/shanghai/</guid>
+      <description>外滩的万国建筑博览群与浦东的摩天大楼隔江相望，展现着这座国际大都市的独特魅力。</description>
     </item>
   </channel>
 </rss>

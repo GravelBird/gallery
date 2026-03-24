@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>冰岛 on 我的相册</title>
+    <link>http://localhost:1313/tags/%E5%86%B0%E5%B2%9B/</link>
+    <description>Recent content in 冰岛 on 我的相册</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 05 Sep 2024 16:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%86%B0%E5%B2%9B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>冰岛 - 冰与火之歌的奇幻国度</title>
+      <link>http://localhost:1313/posts/iceland/</link>
+      <pubDate>Thu, 05 Sep 2024 16:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/iceland/</guid>
+      <description>极光、冰川、火山、瀑布，这里是地球上最像外星球的地方。</description>
+    </item>
+  </channel>
+</rss>
