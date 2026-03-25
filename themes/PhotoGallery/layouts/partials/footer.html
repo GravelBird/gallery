@@ -29,6 +29,73 @@
 </script>
 {{- end }}
 
+{{- /* Mobile Menu Toggle Functionality */}}
+<script>
+(function() {
+    'use strict';
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    if (!menuToggle || !menu) return;
+
+    function toggleMenu() {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+
+        if (isExpanded) {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menu.classList.remove('menu-visible');
+            menu.classList.add('menu-hidden');
+            document.body.classList.remove('menu-open');
+        } else {
+            menuToggle.setAttribute('aria-expanded', 'true');
+            menu.classList.remove('menu-hidden');
+            menu.classList.add('menu-visible');
+            document.body.classList.add('menu-open');
+        }
+    }
+
+    function closeMenu() {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('menu-visible');
+        menu.classList.add('menu-hidden');
+        document.body.classList.remove('menu-open');
+    }
+
+    menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    document.addEventListener('click', function(e) {
+        if (document.body.classList.contains('menu-open') &&
+            !menu.contains(e.target) &&
+            !menuToggle.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            closeMenu();
+        });
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
+            closeMenu();
+        }
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
+})();
+</script>
+
 {{- /* Image lazy loading */}}
 <script>
     document.addEventListener("DOMContentLoaded", function() {

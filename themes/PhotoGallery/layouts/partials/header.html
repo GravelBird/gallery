@@ -7,28 +7,6 @@
                 {{- end }}
                 <span class="site-title">{{ site.Title }}</span>
             </a>
-        </div>
-        
-        <div class="nav-right">
-            <ul id="menu">
-                {{- range site.Menus.main }}
-                <li>
-                    <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
-                        <span>{{ .Name }}</span>
-                    </a>
-                </li>
-                {{- end }}
-                <li>
-                    <a href="{{ "photos/" | absLangURL }}" title="照片墙">
-                        <span>照片墙</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ "tags/" | absLangURL }}" title="标签">
-                        <span>标签</span>
-                    </a>
-                </li>
-            </ul>
             
             {{- if not site.Params.disableThemeToggle }}
             <button id="theme-toggle" accesskey="t" title="Toggle theme (Alt + T)" aria-label="Toggle theme">
@@ -50,6 +28,33 @@
                 </svg>
             </button>
             {{- end }}
+        </div>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+        
+        <div class="nav-right">
+            <ul id="menu" class="menu-hidden">
+                {{- range site.Menus.main }}
+                <li>
+                    <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
+                        <span>{{ .Name }}</span>
+                    </a>
+                </li>
+                {{- end }}
+                <li>
+                    <a href="{{ "photos/" | absLangURL }}" title="照片墙">
+                        <span>照片墙</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ "tags/" | absLangURL }}" title="标签">
+                        <span>标签</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
 </header>
