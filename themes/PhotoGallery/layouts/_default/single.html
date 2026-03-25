@@ -109,7 +109,7 @@
     {{- with .Params.tags }}
     <div class="photo-tags">
         {{- range . }}
-        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="photo-tag">#{{ . }}</a>
+        <a href="{{ "tags/" | absLangURL }}{{ . | urlize }}" class="photo-tag">#{{ . }}</a>
         {{- end }}
     </div>
     {{- end }}

@@ -63,7 +63,7 @@
                     {{- with .Params.tags }}
                     <div class="album-tags">
                         {{- range first 3 . }}
-                        <a href="/tags/{{ . | urlize }}/" class="tag">#{{ . }}</a>
+                        <a href="{{ "tags/" | absLangURL }}{{ . | urlize }}/" class="tag">#{{ . }}</a>
                         {{- end }}
                     </div>
                     {{- end }}
