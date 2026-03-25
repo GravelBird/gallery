@@ -1,0 +1,6 @@
+# PhotoGallery Theme
+
+/assets/css/core.min.*.css
+.hugo_build.lock
+public/
+resources/

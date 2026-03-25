@@ -3,10 +3,10 @@
 
 name = "PhotoGallery"
 license = "MIT"
-licenselink = "https://github.com/yourusername/hugo-PhotoGallery/blob/main/LICENSE"
+licenselink = "LICENSE"
 description = "A clean, modern Hugo photo gallery theme inspired by Instagram"
-homepage = "https://github.com/yourusername/hugo-PhotoGallery"
-demosite = "https://yourusername.github.io/hugo-PhotoGallery/"
+homepage = ""
+demosite = ""
 tags = [
   "responsive",
   "gallery",
@@ -34,12 +34,5 @@ features = [
 min_version = "0.112.0"
 
 [author]
-  name = "Your Name"
-  homepage = "https://github.com/yourusername"
-
-# If porting an existing theme
-[original]
-  name = "PaperMod"
-  author = "Aditya Telange"
-  homepage = "https://github.com/adityatelange"
-  repo = "https://github.com/adityatelange/hugo-PaperMod"
+  name = ""
+  homepage = ""

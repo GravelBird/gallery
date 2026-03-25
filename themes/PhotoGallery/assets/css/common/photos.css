@@ -100,10 +100,11 @@
     }
 }
 
-/* Responsive - Mobile: 1 column */
+/* Responsive - Mobile: 3 columns */
 @media (max-width: 480px) {
     .photos-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: calc(var(--gap) / 3);
     }
     
     .photos-page .page-header h1 {
