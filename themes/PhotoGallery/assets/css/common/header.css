@@ -180,10 +180,10 @@
 
 /* Menu hidden state */
 .menu-hidden {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    pointer-events: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
 }
 
 /* Menu visible state */
