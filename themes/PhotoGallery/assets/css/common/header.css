@@ -178,20 +178,33 @@
     transform: rotate(-45deg);
 }
 
-/* Menu hidden state */
-.menu-hidden {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    pointer-events: none;
+/* Menu hidden state - only apply on mobile */
+@media (max-width: 768px) {
+    #menu.menu-hidden {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        pointer-events: none;
+    }
+
+    #menu.menu-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
 }
 
-/* Menu visible state */
-.menu-visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    pointer-events: auto;
+/* Desktop: menu always visible regardless of class */
+@media (min-width: 769px) {
+    #menu,
+    #menu.menu-hidden,
+    #menu.menu-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        pointer-events: auto;
+    }
 }
 
 /* Responsive header */
